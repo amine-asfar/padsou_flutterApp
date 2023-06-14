@@ -76,8 +76,9 @@ class Register extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   Container(
-                    margin: EdgeInsets.only(top: 80),
+                    margin: EdgeInsets.only(top: 50),
                     child: Text("En t’inscrivant, tu acceptes les Conditions générales d’utilisation de Padsou",style: TextStyle(
                       color: CustomColors.textColor,
                       fontSize: 12,
@@ -86,7 +87,7 @@ class Register extends StatelessWidget {
                   ),
                   Container(
                     width: double.infinity,
-                    margin: EdgeInsets.only(top:30),
+                    margin: EdgeInsets.only(top:20),
                     child: ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor: const MaterialStatePropertyAll<Color>(CustomColors.primaryColor),
@@ -100,8 +101,9 @@ class Register extends StatelessWidget {
                           color: Colors.white,
                         ),)),
                   ),
+                  Spacer(),
                   Container(
-                    margin: EdgeInsets.only(top: 160),
+                    margin: EdgeInsets.only(top: 60),
                     child: GestureDetector(
                       onTap: () {
                         Navigator.pushNamed(context, "/login");

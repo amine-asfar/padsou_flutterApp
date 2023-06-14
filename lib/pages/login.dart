@@ -9,7 +9,7 @@ class Login extends StatelessWidget {
     return Material(
         child: Container(
           //color: CustomColors.thirdColor,
-            padding: EdgeInsets.symmetric(vertical: 120, horizontal: 24),
+            padding: EdgeInsets.symmetric(vertical: 100, horizontal: 24),
             child: Center(
               child: Column(
                 children: [
@@ -70,25 +70,26 @@ class Login extends StatelessWidget {
                   ),
                   Container(
                     width: double.infinity,
-                    margin: EdgeInsets.only(top:30),
+                    margin: EdgeInsets.only(top:20),
                     child: ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor: const MaterialStatePropertyAll<Color>(CustomColors.primaryColor),
-                          padding: MaterialStateProperty.all(EdgeInsets.only(top: 20,right: 90,bottom: 20,left: 90)),
+                          padding: MaterialStateProperty.all(EdgeInsets.only(right: 90,bottom: 20,left: 90)),
                           shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
                         ),
-                        onPressed: (){Navigator.pushNamed(context, "/register");},
+                        onPressed: (){Navigator.pushNamed(context, "/home");},
                         child: Text("Se connecter",style: TextStyle(
                           fontSize: 16,
                           fontFamily: "TitreCF",
                           color: Colors.white,
                         ),)),
                   ),
+                  Spacer(),
                   Container(
-                    margin: EdgeInsets.only(top: 300),
+
                     child: GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, "/login");
+                          Navigator.pushNamed(context, "/register");
                         },
                         child: RichText(
                           text: TextSpan(
